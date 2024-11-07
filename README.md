@@ -5,23 +5,78 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 This project is a Products Management Dashboard built with Next.js and React Query to handle products efficiently. It includes features like user authentication, search, pagination, and product management (add, edit, delete). The project is optimized with server-side rendering and incremental static regeneration, ensuring a fast and dynamic user experience.
 
 ## Table of content
-**-Features**
+**Features**
 
-**-Tech Stack**
+**Tech Stack**
 
-**-Project Structure**
+**Project Structure**
 
-**-Getting Started**
+**Getting Started**
 
-**-API Configuration**
+**API Configuration**
 
-**-Pagination and Client-Side State Management**
+**Pagination and Client-Side State Management**
 
-**-Authentication and Authorization**
+**Authentication and Authorization**
 
-**-Usage**
+**Usage**
 
-**-License**
+**License**
+
+## Features
+
+**User Authentication:** Login with token-based authentication.
+
+**Product Management:** CRUD operations for products (Create, Read, Update, Delete).
+
+**Pagination:** Dynamically handle pages with the react-query library and update the URL query parameter to reflect the current page.
+
+**Search:** Filter products by search keywords.
+
+**Toast Notifications::** Visual feedback for actions such as login success, adding, editing, or deleting products.
+
+**Responsive UI:** Optimized layout for different screen sizes.
+
+## Tech Stack
+
+**Next.js:** Framework for React that allows server-side rendering and static site generation.
+
+**React Query:** Data-fetching and state management library for handling API data and caching.
+
+**Axios:** Promise-based HTTP client for making API requests.
+
+**js-cookie:** Library for handling cookies to store authentication tokens.
+
+**React Icons:** For adding icons to the UI.
+
+**Toastify:** For showing notifications to users.
+
+**React Modal:** For handling Add, Edit, and Delete Modals.
+
+## Project Structure
+
+.
+├── components
+│   ├── Layouts
+│   │   └── MainLayout.js         # Main layout with conditional header and footer
+│   ├── modules
+│   │   ├── Table.js              # Table component for displaying products
+│   │   ├── AddModal.js           # Modal component for adding products
+│   │   ├── EditModal.js          # Modal component for editing products
+│   │   └── DeleteModal.js        # Modal component for deleting products
+│   └── templates
+│       └── Loader.js             # Loader component
+├── api
+│   └── api.js                    # Axios instance and API calls setup
+├── pages
+│   ├── index.js                  # Home page with product list
+│   ├── login.js                  # Login page
+│   ├── products.js               # Products page with pagination, search, and CRUD operations
+│   └── register.js               # Register page
+└── styles
+    └── Products.module.css       # CSS module for styling the Products page
+
+
 
 ## Getting Started
 
