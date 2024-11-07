@@ -59,9 +59,7 @@ This project is a Products Management Dashboard built with Next.js and React Que
 
 **1. Clone the repository:**
 ```
-git clone https://github.com/your-username/products-management-dashboard.git
-
-cd products-management-dashboard
+git clone https://github.com/behnam-nbt/mini-project-next.git
 ```
 **2. Install dependencies:**
 ```
