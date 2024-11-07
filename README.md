@@ -3,19 +3,19 @@
 This project is a Products Management Dashboard built with Next.js and React Query to handle products efficiently. It includes features like user authentication, search, pagination, and product management (add, edit, delete). The project is optimized with server-side rendering and incremental static regeneration, ensuring a fast and dynamic user experience.
 
 ## Table of content
-**Features**
+[Features](#features)
 
-**Tech Stack**
+[Tech Stack](#tech-stack)
 
-**Getting Started**
+[Getting Started](#getting-started)
 
-**API Configuration**
+[API Configuration](#api-configuration)
 
-**Pagination and Client-Side State Management**
+[Pagination and Client-Side State Management](#pagination-and-client-side-state-management)
 
-**Authentication and Authorization**
+[Authentication and Authorization](#authentication-and-authorization)
 
-**Usage**
+[Usage](#usage)
 
 ## Features
 
