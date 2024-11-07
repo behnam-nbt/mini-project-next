@@ -7,8 +7,6 @@ This project is a Products Management Dashboard built with Next.js and React Que
 
 **Tech Stack**
 
-**Project Structure**
-
 **Getting Started**
 
 **API Configuration**
@@ -18,8 +16,6 @@ This project is a Products Management Dashboard built with Next.js and React Que
 **Authentication and Authorization**
 
 **Usage**
-
-**License**
 
 ## Features
 
@@ -51,47 +47,105 @@ This project is a Products Management Dashboard built with Next.js and React Que
 
 **React Modal:** For handling Add, Edit, and Delete Modals.
 
-## Project Structure
-
-.
-├── components
-
-│   ├── Layouts
-
-│   │   └── MainLayout.js         # Main layout with conditional header and footer
-
-│   ├── modules
-│   │   ├── Table.js              # Table component for displaying products
-│   │   ├── AddModal.js           # Modal component for adding products
-│   │   ├── EditModal.js          # Modal component for editing products
-│   │   └── DeleteModal.js        # Modal component for deleting products
-│   └── templates
-│       └── Loader.js             # Loader component
-├── api
-│   └── api.js                    # Axios instance and API calls setup
-├── pages
-│   ├── index.js                  # Home page with product list
-│   ├── login.js                  # Login page
-│   ├── products.js               # Products page with pagination, search, and CRUD operations
-│   └── register.js               # Register page
-└── styles
-    └── Products.module.css       # CSS module for styling the Products page
-
-
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**Node.js (>=14.x.x)**
+**npm or yarn**
+
+### Installation
+
+**1. Clone the repository:**
 ```
+git clone https://github.com/your-username/products-management-dashboard.git
+
+cd products-management-dashboard
+```
+**2. Install dependencies:**
+```
+npm install
+
+#or
+
+yarn install
+```
+**3. Run the application in development mode:**
+```
+npm run dev
+
+#or
+
+yarn dev
+```
+**4. Open the application: Go to http://localhost:3000 in your browser.**
+
+### Build for Production
+
+To create an optimized production build:
+```
+npm run build
+
+#or
+
+yarn build
+```
+To start the production server:
+```
+npm start
+
+#or
+
+yarn start
+```
+
+## API Configuration
+
+### Axios Instance
+
+The Axios instance is configured in */api/api.js* and is responsible for making API requests. You may need to update the base URL in api.js to match your backend API endpoint.
+
+### Fetch Functions
+
+For example, *fetchProducts* retrieves paginated products data:
+```
+export const fetchProducts = async (page = 1, limit = 10) => {
+  try {
+    const response = await api.get(`/products`, {
+      params: { page, limit },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching products:', error.message || error);
+    throw new Error('Failed to fetch products. Please try again later.');
+  }
+};
+```
+
+## Pagination and Client-Side State Management
+
+**Pagination:** The Products page uses React Query’s *useQuery* with the current page as a dependency to re-fetch data on page change.
+
+**URL Query Parameter:** The current page number is reflected in the URL (*?page=1*), which enables direct access to any page.
+
+## Authentication and Authorization
+
+This project uses token-based authentication managed with **js-cookie**. The token is stored as a cookie upon login and checked on protected routes (like **/products**). When the token is absent, users are redirected to the **/login** page.
+
+**Login Redirect:** On successful login, the user is redirected to the */products* page with a success toast message.
+
+## Usage
+
+**Login:** Navigate to */login*, enter credentials, and submit.
+
+**Product Management:** Access products, search, add, edit, or delete.
+
+**Pagination:** Use the Next and Previous buttons to navigate through paginated products.
+
+**Notifications:** Receive visual feedback for login and product management actions.
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
