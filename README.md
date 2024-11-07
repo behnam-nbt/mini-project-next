@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 # Products Management Dashboard
 
 This project is a Products Management Dashboard built with Next.js and React Query to handle products efficiently. It includes features like user authentication, search, pagination, and product management (add, edit, delete). The project is optimized with server-side rendering and incremental static regeneration, ensuring a fast and dynamic user experience.
@@ -57,8 +55,11 @@ This project is a Products Management Dashboard built with Next.js and React Que
 
 .
 ├── components
+
 │   ├── Layouts
+
 │   │   └── MainLayout.js         # Main layout with conditional header and footer
+
 │   ├── modules
 │   │   ├── Table.js              # Table component for displaying products
 │   │   ├── AddModal.js           # Modal component for adding products
